@@ -1,0 +1,33 @@
+t = int(input())
+for i in range(t):
+     n=int(input())
+     arr=list(map(int,input().split()))
+     d1=arr[1]-arr[0]
+     d2=arr[n-1]-arr[n-2]
+     arr1=[]
+     arr2=[]
+     for i in range(1,n+1):
+          t=arr[0]+((i-1)*d1)
+          arr1.append(t)
+     for j in range(1,n+1):
+          k=arr[n-1]-((j-1)*d2)
+          arr2.append(k)
+     arr2.reverse()
+     count1=0
+     for m in range(n):
+          if (arr[m]== arr1[m]):
+               count1+=1
+     count2=0
+     for l in range(n):
+          if (arr[l]==arr2[l]):
+               count2+=1
+     o = 0
+     p = 0
+     if count1>count2:
+          for o in range(n):
+               print(arr1[o], end=' ')
+               o = o + 1
+     else:
+          for p in range(n):
+               print(arr2[p], end=' ')
+               p = p + 1
