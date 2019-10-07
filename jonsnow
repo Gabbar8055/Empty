@@ -1,0 +1,17 @@
+t = int(input())
+for _ in range(t):
+    n,m = input().split()
+    n = int(n)
+    m = int(m)
+    snow = list(map(int,input().split()))
+    death =list(map(int,input().split()))
+
+    x = sum(snow)
+    y = sum(death)
+
+    if x >= y:
+        print("Snow")
+    else:
+        print("Death")
+
+
