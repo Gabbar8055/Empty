@@ -1,0 +1,13 @@
+for _ in range(int(input())):
+    n = int(input())
+    goals = list(map(int, input().split()))
+    fouls = list(map(int, input().split()))
+    sum = 0
+    point=[]
+    for i in range(n):
+        x = (goals[i] * 20) - (fouls[i]*10)
+        point.append(x)
+    if max(point) > 0:
+        print(max(point))
+    else:
+        print('0')
