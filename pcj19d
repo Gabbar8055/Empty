@@ -1,0 +1,10 @@
+# 1 1 1 3
+a,b,c,n=list(map(int,input().split()))
+for x in range(1001):
+    for y in range(1001):
+        temp=n
+        temp-=a*x
+        temp-=b*y
+        if temp%c==0:
+            print(x,y,temp//c)
+            exit()
